@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-32">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrix | Smart Farming Morocco</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            background-color: #0c0c0c;
+            color: #f5f5f5;
+        }
+        
+        /* Fixed scroll jitter on iOS */
+        html {
+          scrollbar-gutter: stable;
+        }
+
+        .glass-dark {
+          background: rgba(15, 15, 15, 0.85);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .gradient-text {
+          background: linear-gradient(135deg, #a3e635 0%, #fbbf24 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        /* High-Performance Animations */
+        .reveal {
+          opacity: 0;
+          transform: translateY(20px);
+          will-change: transform, opacity;
+          transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        
+        .animate-float {
+          animation: float 5s ease-in-out infinite;
+          will-change: transform;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #0c0c0c;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #1c1c1c;
+          border-radius: 10px;
+          border: 2px solid #0c0c0c;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #a3e635;
+        }
+
+        ::selection {
+          background: #fbbf24;
+          color: #000;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-[#0c0c0c] text-stone-100">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
